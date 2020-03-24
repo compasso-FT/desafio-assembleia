@@ -7,31 +7,31 @@ import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/hello")
-@Api(value = "HelloWorld Resource", description = "shows hello world")
+@RequestMapping("/desafio")
+@Api(value = "Desafio Assembleia", description = "Sistema de votação em uma assembleia")
 public class teste {
 
-    @ApiOperation(value = "Returns Hello World")
+    @ApiOperation(value = "Desafio Assembleia")
     @ApiResponses(
             value = {
                     @ApiResponse(code = 100, message = "100 is the message"),
-                    @ApiResponse(code = 200, message = "Successful Hello World")
+                    @ApiResponse(code = 200, message = "Successful")
             }
     )
     @GetMapping
-    public String hello() {
-        return "Hello World";
+    public String desafio() {
+        return "Desafio Assembleia";
     }
 
-    @ApiOperation(value = "Returns Hello World")
+    @ApiOperation(value = "Desafio Assembleia")
     @PostMapping("/post")
-    public String helloPost(@RequestBody final String hello) {
-        return hello;
+    public String desafioPost(@RequestBody final String desafio) {
+        return desafio;
     }
 
-    @ApiOperation(value = "Returns Hello World")
+    @ApiOperation(value = "Desafio Assembleia")
     @PutMapping("/put")
-    public String helloPut(@RequestBody final String hello) {
-        return hello;
+    public String desafioPut(@RequestBody final String desafio) {
+        return desafio;
     }
 }
