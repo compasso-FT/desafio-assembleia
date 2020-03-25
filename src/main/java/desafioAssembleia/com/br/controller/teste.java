@@ -6,12 +6,13 @@ import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "*")
 @RestController
-@RequestMapping("/desafio")
+@RequestMapping(value="/api")
 @Api(value = "Desafio Assembleia", description = "Sistema de votação em uma assembleia")
 public class teste {
 
-    @ApiOperation(value = "Desafio Assembleia")
+    @ApiOperation(value = "Retorna Desafio Assembleia")
     @ApiResponses(
             value = {
                     @ApiResponse(code = 100, message = "100 is the message"),
@@ -23,13 +24,13 @@ public class teste {
         return "Desafio Assembleia";
     }
 
-    @ApiOperation(value = "Desafio Assembleia")
+    @ApiOperation(value = "Salva Desafio Assembleia")
     @PostMapping("/post")
     public String desafioPost(@RequestBody final String desafio) {
         return desafio;
     }
 
-    @ApiOperation(value = "Desafio Assembleia")
+    @ApiOperation(value = "Atualiza Desafio Assembleia")
     @PutMapping("/put")
     public String desafioPut(@RequestBody final String desafio) {
         return desafio;
