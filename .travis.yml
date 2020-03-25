@@ -2,7 +2,5 @@ language: java
 
 sudo: false
 
-os: windows
-
 jdk:
     - openjdk8
