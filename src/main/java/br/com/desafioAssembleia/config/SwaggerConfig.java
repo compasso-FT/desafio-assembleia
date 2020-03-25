@@ -1,4 +1,4 @@
-package desafioAssembleia.com.br.config;
+package br.com.desafioAssembleia.config;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
@@ -23,7 +23,7 @@ public class SwaggerConfig {
 	public Docket productApi() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("desafioAssembleia.com.br"))
+				.apis(RequestHandlerSelectors.basePackage("br.com.desafioAssembleia"))
 				.paths(regex("/api.*"))
 				.build()
 				.apiInfo(metaInfo());

@@ -1,4 +1,4 @@
-package desafioAssembleia.com.br;
+package br.com.desafioAssembleia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

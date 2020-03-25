@@ -1,4 +1,4 @@
-package desafioAssembleia.com.br.controller;
+package br.com.desafioAssembleia.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
