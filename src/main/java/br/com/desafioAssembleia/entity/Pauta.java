@@ -6,7 +6,6 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
@@ -30,7 +29,7 @@ public class Pauta {
 	private String descricao;
 
 	@OneToOne(fetch = FetchType.LAZY)
-	private List<Votacao> votacoes;
+	private Votacao votacao;
 
 	public Long getId() {
 		return id;
@@ -56,11 +55,11 @@ public class Pauta {
 		this.descricao = descricao;
 	}
 
-	public List<Votacao> getVotacoes() {
-		return votacoes;
+	public Votacao getVotacao() {
+		return votacao;
 	}
 
-	public void setVotacoes(List<Votacao> votacoes) {
-		this.votacoes = votacoes;
+	public void setVotacao(Votacao votacao) {
+		this.votacao = votacao;
 	}
 }
