@@ -2,12 +2,16 @@ package br.com.desafioAssembleia.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
+
+import br.com.desafioAssembleia.enums.Resultado;
 
 @Entity
 @Table(name = "votacao")
@@ -19,7 +23,8 @@ public class Votacao {
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
 	private Long tempo;
-	private String resultado;
+	@Enumerated(EnumType.STRING)
+	private Resultado resultado;
 	
 	public Long getId() {
 		return id;
@@ -33,10 +38,10 @@ public class Votacao {
 	public void setTempo(Long tempo) {
 		this.tempo = tempo;
 	}
-	public String getResultado() {
+	public Resultado getResultado() {
 		return resultado;
 	}
-	public void setResultado(String resultado) {
+	public void setResultado(Resultado resultado) {
 		this.resultado = resultado;
 	}
 }
