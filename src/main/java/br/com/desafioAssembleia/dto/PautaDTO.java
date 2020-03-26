@@ -11,6 +11,8 @@ public class PautaDTO {
 	@NotNull(message = "informe a descrição da pauta")
 	@Length(min = 10, max = 2000, message = "A descrição deve conter entre 10 e 2000 caracteres")
 	private String descricao;
+	@NotNull(message = "informa um tempo disponível para a votação")
+	private Long tempoVotacao;
 
 	private Long votacao;
 
@@ -36,6 +38,14 @@ public class PautaDTO {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public Long getTempoVotacao() {
+		return tempoVotacao;
+	}
+
+	public void setTempoVotacao(Long tempoVotacao) {
+		this.tempoVotacao = tempoVotacao;
 	}
 
 	public Long getVotacao() {
