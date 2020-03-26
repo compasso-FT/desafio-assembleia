@@ -27,7 +27,7 @@ public class Associado {
 	@Column(nullable = false)
 	private String nomeAssociado;
 	@NotBlank
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String cpf;
 	@NotBlank
 	@Column(nullable = false)
