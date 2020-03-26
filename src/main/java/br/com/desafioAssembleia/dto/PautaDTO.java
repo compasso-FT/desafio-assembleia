@@ -13,7 +13,6 @@ public class PautaDTO {
 	private String descricao;
 	@NotNull(message = "informa um tempo disponível para a votação")
 	private Long tempoVotacao;
-
 	private Long votacao;
 
 	public Long getId() {

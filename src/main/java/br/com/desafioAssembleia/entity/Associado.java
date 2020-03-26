@@ -32,10 +32,8 @@ public class Associado {
 	@NotBlank
 	@Column(nullable = false)
 	private String senha;
-
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<Assembleia> assembleias;
-	
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<Pauta> pautas;
 
