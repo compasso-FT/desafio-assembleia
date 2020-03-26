@@ -27,6 +27,9 @@ public class Pauta {
 	@NotBlank
 	@Column(nullable = false)
 	private String descricao;
+	@NotBlank
+	@Column(nullable = false)
+	private Long tempoVotacao;
 
 	@OneToOne(fetch = FetchType.LAZY)
 	private Votacao votacao;
@@ -53,6 +56,14 @@ public class Pauta {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public Long getTempoVotacao() {
+		return tempoVotacao;
+	}
+
+	public void setTempoVotacao(Long tempoVotacao) {
+		this.tempoVotacao = tempoVotacao;
 	}
 
 	public Votacao getVotacao() {
