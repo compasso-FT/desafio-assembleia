@@ -22,21 +22,21 @@ public class Votacao {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
-	private Long tempo;
+	private String detalheVotacao;
 	@Enumerated(EnumType.STRING)
 	private Resultado resultado;
-	
+
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public Long getTempo() {
-		return tempo;
+	public String getDetalheVotacao() {
+		return detalheVotacao;
 	}
-	public void setTempo(Long tempo) {
-		this.tempo = tempo;
+	public void setDetalheVotacao(String detalheVotacao) {
+		this.detalheVotacao = detalheVotacao;
 	}
 	public Resultado getResultado() {
 		return resultado;
