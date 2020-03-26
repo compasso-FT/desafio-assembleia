@@ -6,15 +6,16 @@ import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import br.com.desafioAssembleia.entity.Assembleia;
+import br.com.desafioAssembleia.entity.Pauta;
+
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AssociadoDTO {
 
 	private Long id;
 	@Length(min = 3, max = 50, message = "O nome deve conter entre 3 e 50 caracteres")
 	private String nomeAssociado;
-	
 	private List<Assembleia> assembleias;
-	
 	private List<Pauta> pautas;
 
 	public Long getId() {

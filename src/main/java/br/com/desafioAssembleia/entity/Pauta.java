@@ -30,7 +30,6 @@ public class Pauta {
 	@NotBlank
 	@Column(nullable = false)
 	private Long tempoVotacao;
-
 	@OneToOne(fetch = FetchType.LAZY)
 	private Votacao votacao;
 

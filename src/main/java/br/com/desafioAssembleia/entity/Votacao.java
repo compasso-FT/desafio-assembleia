@@ -29,18 +29,23 @@ public class Votacao {
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getDetalheVotacao() {
 		return detalheVotacao;
 	}
+
 	public void setDetalheVotacao(String detalheVotacao) {
 		this.detalheVotacao = detalheVotacao;
 	}
+
 	public Resultado getResultado() {
 		return resultado;
 	}
+
 	public void setResultado(Resultado resultado) {
 		this.resultado = resultado;
 	}

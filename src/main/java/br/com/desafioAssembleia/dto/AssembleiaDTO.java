@@ -9,6 +9,8 @@ import org.hibernate.validator.constraints.Length;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import br.com.desafioAssembleia.entity.Pauta;
+
 public class AssembleiaDTO {
 
 	private Long id;
@@ -19,7 +21,6 @@ public class AssembleiaDTO {
 	@NotNull(message = "informe uma data")
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm", locale = "pt-BR", timezone = "Brazil/East")
 	private LocalDateTime data;
-
 	private List<Pauta> pautas;
 
 	public Long getId() {

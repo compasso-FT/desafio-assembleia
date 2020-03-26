@@ -23,7 +23,7 @@ public class Assembleia {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="id", updatable = false, nullable = false)
+	@Column(name = "id", updatable = false, nullable = false)
 	private Long id;
 	@NotBlank
 	@Column(nullable = false)
@@ -34,7 +34,6 @@ public class Assembleia {
 	@Column(name = "data", columnDefinition = "TIMESTAMP", unique = true)
 	@DateTimeFormat(iso = DateTimeFormat.ISO.TIME, pattern = "yyyy-MM-dd hh:mm")
 	private LocalDateTime data;
-
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<Pauta> pautas;
 
