@@ -29,9 +29,9 @@ public class Assembleia {
 	@Column(nullable = false)
 	private String nomeAssembleia;
 	@NotBlank
-	@Column(nullable = false)
+	@Column(nullable = false, unique = true)
 	private String local;
-	@Column(name = "data", columnDefinition = "TIMESTAMP")
+	@Column(name = "data", columnDefinition = "TIMESTAMP", unique = true)
 	@DateTimeFormat(iso = DateTimeFormat.ISO.TIME, pattern = "yyyy-MM-dd hh:mm")
 	private LocalDateTime data;
 
