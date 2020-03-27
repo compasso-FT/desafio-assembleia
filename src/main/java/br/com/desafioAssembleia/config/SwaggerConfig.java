@@ -26,7 +26,7 @@ public class SwaggerConfig {
 	}
 	
 	private ApiInfo apiInfo() {
-		return new ApiInfoBuilder().title("Wallet API")
+		return new ApiInfoBuilder().title("Desafio Assembleia")
 				.description("Gerência de sessões de votação").version("1.0")
 				.build();
 	}

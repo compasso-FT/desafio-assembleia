@@ -10,7 +10,6 @@ import org.hibernate.validator.constraints.br.CPF;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
 import br.com.desafioAssembleia.entity.Assembleia;
-import br.com.desafioAssembleia.entity.Pauta;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class AssociadoDTO {
@@ -26,7 +25,6 @@ public class AssociadoDTO {
 	@Length(min = 6, message = "A senha deve conter no mínimo 6 caracteres")
 	private String senha;
 	private List<Assembleia> assembleias;
-	private List<Pauta> pautas;
 
 	public Long getId() {
 		return id;
@@ -66,13 +64,5 @@ public class AssociadoDTO {
 
 	public void setAssembleias(List<Assembleia> assembleias) {
 		this.assembleias = assembleias;
-	}
-
-	public List<Pauta> getPautas() {
-		return pautas;
-	}
-
-	public void setPautas(List<Pauta> pautas) {
-		this.pautas = pautas;
 	}
 }
