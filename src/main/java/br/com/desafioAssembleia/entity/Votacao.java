@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
 
-import br.com.desafioAssembleia.enums.Resultado;
+import br.com.desafioAssembleia.util.enums.Resultado;
 
 @Entity
 @Table(name = "votacao")
