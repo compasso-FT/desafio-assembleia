@@ -24,7 +24,7 @@ public class DataConfiguration {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setUsername("postgres");
         dataSource.setPassword("123456");
-        dataSource.setUrl("jdbc:postgresql://localhost:5432/desafio_assembleia");
+        dataSource.setUrl("jdbc:postgresql://localhost/desafio_assembleia");
         dataSource.setDriverClassName("org.postgresql.Driver");
 
         factoryBean.setDataSource(dataSource);
@@ -32,11 +32,11 @@ public class DataConfiguration {
         Properties props = new Properties();
         props.setProperty("hibernate.dialect", "org.hibernate.dialect.PostgreSQLDialect");
         props.setProperty("hibernate.show_sql", "true");
-        props.setProperty("hibernate.hbm2ddl.auto", "update");
+        props.setProperty("hibernate.hbm2ddl.auto", "create");
 
         factoryBean.setJpaProperties(props);
 
-        factoryBean.setPackagesToScan("br.com.desafioAssembleia.entity");
+        factoryBean.setPackagesToScan("br.com.desafioAssembleia.dto");
 
         return factoryBean;
     }
