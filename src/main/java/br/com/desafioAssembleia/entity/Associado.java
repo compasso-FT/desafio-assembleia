@@ -34,8 +34,6 @@ public class Associado {
 	private String senha;
 	@OneToMany(fetch = FetchType.LAZY)
 	private List<Assembleia> assembleias;
-	@OneToMany(fetch = FetchType.LAZY)
-	private List<Pauta> pautas;
 
 	public Long getId() {
 		return id;
@@ -75,13 +73,5 @@ public class Associado {
 
 	public void setAssembleias(List<Assembleia> assembleias) {
 		this.assembleias = assembleias;
-	}
-
-	public List<Pauta> getPautas() {
-		return pautas;
-	}
-
-	public void setPautas(List<Pauta> pautas) {
-		this.pautas = pautas;
 	}
 }

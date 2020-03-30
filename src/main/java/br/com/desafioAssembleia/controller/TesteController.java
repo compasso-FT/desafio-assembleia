@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(value="/api")
 @Api(value = "Desafio Assembleia", description = "Sistema de votação em uma assembleia")
-public class teste {
+public class TesteController {
 
     @ApiOperation(value = "Retorna Desafio Assembleia")
     @ApiResponses(
